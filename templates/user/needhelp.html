@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block childpage %}
+<style>
+    .form-control
+    {
+    margin-bottom:2%;
+    }
+</style>
+
+
+<div class="text-center fs-2">Need a <b class="txt-mycolor">Help</b></div>
+
+<div class="row">
+    <div class="col-sm-10 mx-auto rounded p-5" style="background:#d2e1ed">
+        <div class="row">
+            <div class="col-sm-12">
+               <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            Name
+            <input type="text" name="name" required placeholder="Name..." class="form-control">
+            Email
+            <input type="email" name="email" required placeholder="Email..." class="form-control">
+            Mobile (Whatsapp No : )
+            <input type="number" name="mobile" required placeholder="Mobile..." class="form-control">
+            Profile Picture
+            <input type="file" name="fu" required class="form-control">
+             Type of Help
+            <input type="text" name="helptype" required placeholder="Type of Help.." class="form-control">
+            Address
+            <textarea name="address"  placeholder="Address.." class="form-control"></textarea>
+                   Message
+            <textarea name="message"  placeholder="Message.." class="form-control"></textarea>
+            <center><input type="submit" value="Save" class="btn bg-mycolor text-light"></center>
+
+        </form>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

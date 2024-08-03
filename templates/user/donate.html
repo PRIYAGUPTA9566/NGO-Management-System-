@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block childpage %}
+<style>
+    .form-control
+    {
+    margin-bottom:2%;
+    }
+</style>
+
+<div class="text-center fs-2">Donate <b class="txt-mycolor">Now</b></div>
+
+<div class="row p-5">
+    <div class="col-sm-6">
+        <div class="row">
+            <ul class="list-group fs-5">
+  <li class="list-group-item bg-mycolor" aria-current="true">An active item</li>
+  <li class="list-group-item">
+      <img src="{% static 'images/d1.png'%}" style="max-height:80px;" class="img-thumbnail"> 2345642353,75436786
+      <img src="{% static 'images/qr.jpg'%}" style="max-height:80px;" class="img-thumbnail">
+  </li>
+  <li class="list-group-item">
+      <img src="{% static 'images/d2.jpg'%}" style="max-height:80px;" class="img-thumbnail"> 2345642353,75436786
+      <img src="{% static 'images/qr.jpg'%}" style="max-height:80px;" class="img-thumbnail">
+  </li>
+  <li class="list-group-item">
+      <img src="{% static 'images/d3.png'%}" style="max-height:50px;" class="img-thumbnail"> 2345642353,75436786
+      <img src="{% static 'images/qr.jpg'%}" style="max-height:80px;" class="img-thumbnail">
+  </li>
+  <li class="list-group-item">
+         <i class="fa-solid fa-phone fa-success fa-spin"></i> For any Query Please call at : 87657686
+  </li>
+</ul>
+        </div>
+    </div>
+    
+    
+    <div class="col-sm-6 p-4 my-0 rounded" style="background:#d2e3ee;">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            Name
+            <input type="text" name="name" required placeholder="Name..." class="form-control">
+            Email
+            <input type="email" name="email" required placeholder="Email..." class="form-control">
+            Mobile (Whatsapp No : )
+            <input type="number" name="mobile" required placeholder="Mobile..." class="form-control">
+            Profile Picture
+            <input type="file" name="fu" required class="form-control">
+            City
+            <input type="text" name="city" required placeholder="City.." class="form-control">
+            Pincode
+            <input type="number" name="pincode" required placeholder="Pincode.." class="form-control">
+            Amount to Donate
+            <input type="number" name="amount" required placeholder="Amount to Pay.." class="form-control">
+            Address
+            <textarea name="address"  placeholder="Address.." class="form-control"></textarea>
+            <input type="submit" value="Save" class="btn bg-mycolor text-light">
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

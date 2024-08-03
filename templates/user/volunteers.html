@@ -1,0 +1,135 @@
+
+
+  {% extends 'base.html'%}
+{% load static %}
+{% block childpage %}
+<style>
+    .form-control
+    {
+    height:45px;
+    margin-bottom:15px;
+    background:#d1e2ed;
+
+        }
+
+    .blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+</style>
+
+
+
+
+<div class="text-center fs-2">Volunteer<b class="txt-mycolor">Opportunities</b></div>
+<div class="row">
+    <!--start opportunities -->
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+         <img src="{% static 'images/s14.jpg'%}" class="img-thumbnail" alt="..." style="width:1500px; max-height:500px;">
+    <p>
+        Many people have the empathy and compassion to contribute to our cause. However, be it due to shortage of time, exhaustive working hours or the lack of awareness about volunteering opportunities, they are not able to.
+
+If you are one of them, you have come to the right place!
+    </p>
+</div>
+<div class="col-sm-1"></div>
+    <!--end opportunities -->
+
+    <!--start card -->
+  <div class="row mx-auto py-2">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+           <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/s7.jpeg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        Sometimes even though we feel for a cause and want to be a part of the solution,
+        our day to day work holds us back. If you are facing this dilemma, you can sign up as a cyber
+        advocate for Akshaya Patra and volunteer online by engaging in four simple tasks.
+    </p>
+  </div>
+</div>
+      </div>
+      <div class="col-sm-4  ">
+           <div class="card" style="width: 24rem; ">
+  <img src="{% static 'images/s12.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        Blogging is one of the most effective online volunteering opportunities in the current world.
+        So if you are a blogger, you can share our work with the world by leveraging blogs and spread
+        the word about our cause. You can also join as a guest blogger and publish your blogs on our website.
+        our day to day work holds us back. If you are facing this dilemma.
+
+
+
+    </p>
+  </div>
+</div>
+      </div>
+      <div class="col-sm-4">
+           <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/s5.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        You can become a social media volunteer for us by engaging in some simple tasks.
+
+Follow us on Facebook, like our posts and recommend us to your friends, families and social circles.
+Tweet and retweet about our work on Twitter and help us attract more contributors to our cause.
+    </p>
+  </div>
+</div>
+      </div>
+
+      <div class="col-sm-1"></div>
+
+  </div>
+    <!--end card -->
+
+</div>
+
+<div class="text-center fs-2">Become a <b class="txt-mycolor">Volunteer</b></div>
+
+<div class="row py-3">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+Name
+<input type="text" name="name" required placeholder="Name..." class="form-control"/>
+Email
+<input type="email" name="email" required placeholder="Email..." class="form-control"/>
+Mobile
+<input type="number" name="mobile" required placeholder="Mobile..." class="form-control"/>
+Profile Picture
+<input type="file" name="fu" required class="form-control"/>
+Current Position
+<input type="text" name="cposition" required placeholder="Current Position" class="form-control"/>
+<textarea class="form-control" name="address"></textarea>
+<center><input type="submit" value="save" class="btn bg-mycolor"/></center>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

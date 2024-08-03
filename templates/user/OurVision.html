@@ -1,0 +1,159 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block childpage %}
+
+<style xmlns="http://www.w3.org/1999/html">
+    .v
+    {
+    height:40px;
+    weight:10px;
+    border:1px solid black;
+    background:var(--bgcolor);
+    border-radius:60px 0px 0px 0px;
+    color:white;
+
+    }
+    .im
+    {
+    min-height:400px;
+    }
+    .text
+    {
+    padding:2% 10%;
+    text-align:justify;
+    }
+    .card:hover
+    {
+    transform:scale(1.35);
+    transition:all 1s;
+    border:2px solid black;
+    #transform:rotate(360deg);
+
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row my-3">
+            <div class="col-sm-6 txt-mycolor"><B>No child in India shall be deprived of eduction because of hunger.</B>
+            </div>
+            <div class="col-sm-6 v "> <center><b class="py-1">OUR VISION</b></center></div>
+        </div>
+
+          <div class="row py-2  mx-auto">
+               <div class="col-sm-6 v "> <center><b>OUR VISION</b></center></div>
+            <div class="col-sm-6 txt-mycolor"><B>No child in India shall be deprived of eduction because of hunger.</B>
+            </div>
+          </div>
+
+       <p>We strive to address classroom hunger and mainutrition in India.</p>
+       <p>We strive to address classroom hunger and mainutrition in India.</p>
+       <p>We strive to address classroom hunger and mainutrition in India.</p>
+       <p>We strive to address classroom hunger and mainutrition in India.</p>
+
+
+   <!-- start images -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+    <img src="{% static 'images/s12.jpg'%}" class="card-img-top"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s15.jpg'%}" class="card-img-top" style="height:140px;"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s9.jpg'%}" class="card-img-top" style="height:140px;"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s8.jpg'%}" class="card-img-top" style="height:140px;"/>
+  </div>
+            </div>
+        <!-- end images -->
+
+
+            <!-- start images -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+    <img src="{% static 'images/s10.jpeg'%}" class="card-img-top"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s7.jpeg'%}" class="card-img-top" style="height:170px;"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s5.jpg'%}" class="card-img-top"/>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3">
+
+                <div class="card">
+    <img src="{% static 'images/s17.jpg'%}" class="card-img-top"/>
+  </div>
+            </div>
+        <!-- end images -->
+
+            <!-- start content -->
+
+        <div class="row my-3">
+            <div class="col-sm-4 py-5"><img src="{% static 'images/s13.jpg'%}" class="card-img-top im"/>
+              </div>
+            <div class="col-sm-8 py-4"><center>
+                <h1 class="txt-mycolor text">The Akshaya Patra Foundation</h1>
+                <p class="text">No child in India shall be deprived of eduction because
+                of hunger.No child in India shall be deprived of eduction because
+                of hunger.No child in India shall be deprived of eduction because
+                of hunger.No child in India shall be deprived of eduction because
+                of hunger.No child in India shall be deprived of eduction because
+                of hunger.No child in India shall be deprived of eduction because
+                of hunger.
+            <div class="row">
+                 <div class="col-sm-1"></div>
+                <div class="col-sm-6"><h3 class="txt-mycolor text">Our Vision</h3>
+                <p class="text">No child in India shall be deprived of eduction because
+                of hunger.</p>
+                </div>
+
+                <div class="col-sm-4"><h3 class="txt-mycolor text">Our Mission</h3>
+              <p class="text"> No child in India shall be deprived of eduction because
+                of hunger.</p>
+                </div>
+            </div>
+                <input type="button" value="Read More.." class="bg-mycolor">
+            </center></p>
+            </div>
+
+
+        </div>
+            <!-- end content -->
+
+            </div>
+</div>
+
+{% endblock %}

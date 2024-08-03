@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block childpage %}
+
+<div class="text-center fs-2">Stories of <b class="txt-mycolor">Change</b></div>
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+
+        {% for i in scdata%}
+<div class="card mb-3" style="max-width: 1200px;">
+  <div class="row g-0">
+
+    <div class="col-md-5">
+      <img src="/{{i.picture}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p class="card-text">{{i.description}}</p>
+       </div>
+    </div>
+  </div>
+</div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
